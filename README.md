@@ -1,3 +1,12 @@
+# links for this project
+
+Class Dates: Monday 9/1123, 
+part1: https://ps-rtt-sei.herokuapp.com/15-week/mod-3/week-13/day-3/slides/
+part2; https://perscholas.instructure.com/courses/1513/pages/week-13-day-4?module_item_id=966044
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
