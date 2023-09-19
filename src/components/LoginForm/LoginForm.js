@@ -32,6 +32,7 @@ async function handleSubmit(evt) {
 return (
   <div>
     <div className="form-container" onSubmit={handleSubmit}>
+    <h4>Please enter your information and then press 'Log In'.</h4>
       <form autoComplete="off" >
         <label>Email</label>
         <input type="text" name="email" value={credentials.email} onChange={handleChange} required />

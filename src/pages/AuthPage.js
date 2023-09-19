@@ -9,7 +9,10 @@ function AuthPage({setUser}) {
 
     <div>
 
-      <h1>Auth Page</h1>
+      <h1>Project Management Dashboard</h1>
+      <div>
+        <span>Welcome to your Project Manangement Dashboard. Here you can create your task lists for all parts of the Project Life Cylce, coordinate and communicate with your team members and add vital information which will be easily accessible for all team members.</span>
+      </div>
 
       <button onClick={() => setShowLogin(!showLogin)}>{showLogin ? "Sign up" : "Log in"}</button>
 

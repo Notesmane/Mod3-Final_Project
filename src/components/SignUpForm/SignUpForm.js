@@ -52,6 +52,7 @@ function SignUpForm({setUser}) {
   return (
     <div>
       <div className="form-container">
+        <h4>Please enter your information and then press 'Sign Up'.</h4>
         <form autoComplete="off" onSubmit={handleSubmit}>
           <label>Name</label>
           <input type="text" name="name" value={formData.name} onChange={handleChange} required/>

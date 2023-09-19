@@ -1,10 +1,9 @@
 import {useState, useEffect } from 'react';
-import TodoList from '../components/TodoList';
-import ProjectResources from '../components/ProjectResources';
-import todosData from '../data/todosData';
-import '../App.css';
+import TodoList from './components/TodoList';
+import todosData from './data/todosData';
+import './App.css';
 
-function NewOrderPage() {
+function App() {
   const [todos, setTodos] = useState([]); /// array structuring
 
   useEffect(() => {
@@ -57,43 +56,18 @@ function NewOrderPage() {
   };
 
   return (
-    <div className="listContainers">
-      {/* <h1>To-Do's App</h1> */}
-      <div className="taskContainer">
-        <TodoList 
-          todos={todos} 
-          addTodo={addTodo}
-          completeTodo={completeTodo}
-          editTodoText={editTodoText}
-          deleteTodo={deleteTodo}
-        />
-      </div>
-      <div className="taskContainer">
-        <ProjectResources 
-          todos={todos} 
-          addTodo={addTodo}
-          completeTodo={completeTodo}
-          editTodoText={editTodoText}
-          deleteTodo={deleteTodo}
-        />
-      </div>
+    <div className="App">
+      <h1>To-Do's App</h1>
       
+      <TodoList 
+        todos={todos} 
+        addTodo={addTodo}
+        completeTodo={completeTodo}
+        editTodoText={editTodoText}
+        deleteTodo={deleteTodo}
+      />
     </div>
   );
 }
 
-// export default App;
-
-
-
-
-
-// function NewOrderPage() {
-//     return (
-//       <div>
-//         <h1>New Order Page</h1>
-//       </div>
-//     );
-//   }
-  
-  export default NewOrderPage;
+export default App;
