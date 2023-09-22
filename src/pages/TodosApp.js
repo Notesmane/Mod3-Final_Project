@@ -55,6 +55,14 @@ function App() {
     localStorage.setItem('todos', JSON.stringify([...todosCopy]));
   };
 
+  const initiationTodo = (id) => {
+    const todosCopy = [...todos];
+    const indexOfTodo=todosCopy.findIndex(item=>item.id === id);
+    todosCopy.splice(indexOfTodo, 1)
+    setTodos([...todosCopy])
+    localStorage.setItem('todos', JSON.stringify([...todosCopy]));
+  };
+
   return (
     <div className="App">
       <h1>To-Do's App</h1>
@@ -63,6 +71,7 @@ function App() {
         todos={todos} 
         addTodo={addTodo}
         completeTodo={completeTodo}
+        initiationTodo={initiationTodo}
         editTodoText={editTodoText}
         deleteTodo={deleteTodo}
       />

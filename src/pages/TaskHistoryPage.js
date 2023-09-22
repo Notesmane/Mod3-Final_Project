@@ -1,10 +1,10 @@
 import {useState, useEffect } from 'react';
 import TodoList from '../components/TodoList';
 import ProjectResources from '../components/ProjectResources';
-import todosData from '../data/todosData';
+// import todosData from '../data/todosData';
 import '../App.css';
 
-function NewOrderPage() {
+function TaskHistoryPage() {
   const [todos, setTodos] = useState([]); /// array structuring
 
   useEffect(() => {
@@ -21,7 +21,8 @@ function NewOrderPage() {
     const newTodo = {
       id: new Date(),
       text: e.target.value,
-      completed: false
+      completed: false,
+      initiation: false //& added
     }
     setTodos([...todos, newTodo]);
     e.target.value = '';
@@ -34,6 +35,15 @@ function NewOrderPage() {
     const todosCopy = [...todos]; // makes a copy of todos
     const indexOfTodo = todosCopy.findIndex(item => item.id === id)
     // todosCopy[2].completed = !todosCopy[2].completed
+    todosCopy[indexOfTodo].completed = !todosCopy[indexOfTodo].completed;
+    setTodos([...todosCopy]);
+    localStorage.setItem('todos', JSON.stringify([...todosCopy]))
+  };
+
+  //& Initiation todo function
+  const initiationTodo = (id) => {
+    const todosCopy = [...todos];
+    const indexOfTodo = todosCopy.findIndex(item => item.id === id)
     todosCopy[indexOfTodo].completed = !todosCopy[indexOfTodo].completed;
     setTodos([...todosCopy]);
     localStorage.setItem('todos', JSON.stringify([...todosCopy]))
@@ -59,23 +69,37 @@ function NewOrderPage() {
   return (
     <div className="listContainers">
       {/* <h1>To-Do's App</h1> */}
-      <div className="taskContainer">
-        <TodoList 
-          todos={todos} 
-          addTodo={addTodo}
-          completeTodo={completeTodo}
-          editTodoText={editTodoText}
-          deleteTodo={deleteTodo}
-        />
+      <div className="allContainers">
+        <div className="taskContainer">
+          <TodoList 
+            todos={tasks} 
+            addTodo={addTodo}
+            completeTodo={completeTodo}
+            initiationTodo={initiationTodo}
+            editTodoText={editTodoText}
+            deleteTodo={deleteTodo}
+          />
+        </div>
+        {/* added here */}
+        <div className="taskContainer">
+          <ProjectResources 
+            todos={todos} 
+            addTodo={addTodo}
+            completeTodo={completeTodo}
+            initiationTodo={initiationTodo}
+            editTodoText={editTodoText}
+            deleteTodo={deleteTodo}
+          />
+        </div>
+
       </div>
-      <div className="taskContainer">
-        <ProjectResources 
-          todos={todos} 
-          addTodo={addTodo}
-          completeTodo={completeTodo}
-          editTodoText={editTodoText}
-          deleteTodo={deleteTodo}
-        />
+      <div className="messageContainer">
+        <div className="messageBox">
+          <h1>Message Box</h1>
+          <section className="messages">
+
+          </section>
+        </div>
       </div>
       
     </div>
@@ -96,4 +120,4 @@ function NewOrderPage() {
 //     );
 //   }
   
-  export default NewOrderPage;
+  export default TaskHistoryPage;

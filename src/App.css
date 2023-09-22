@@ -4,9 +4,36 @@
   justify-content: space-around; */
 }
 
+.allContainers {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+}
+
 .listContainers {
   display: flex;
   justify-content: space-around;
+}
+
+.messageContainer {
+  height: 700px;
+  border: 2px solid blue;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.taskContainer {
+  display: flex;
+  justify-content: space-around;
+  /* text-align: center; */
+  margin: 0px;
+  padding: 0px;
+}
+
+.newTaskFormContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 /* .App-logo {

@@ -12,6 +12,7 @@ function ProjectResources(props) {
             {/* CREATE NEW TODO INPUT  */}
             <input type = "text"
                 onKeyDown={(e) => e.key === 'Enter' && addTodo(e)}
+                placeholder="Enter Resource"
             />
 
             {/* MAPPING OVER DATA  */}

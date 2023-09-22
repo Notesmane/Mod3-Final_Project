@@ -1,7 +1,7 @@
 import {useState} from 'react';
 
 function Todo(props) {
-    const {todo, completeTodo, editTodoText, deleteTodo} = props; // this destructures todo
+    const {todo, completeTodo, initiationTodo, editTodoText, deleteTodo} = props; // this destructures todo
 
     // showInput is the useState and setShowInput is the function of the useState
     const [showInput, setShowInput] = useState(false); // this initializes it to false
@@ -28,6 +28,14 @@ function Todo(props) {
                     type="checkbox"
                     checked={todo.completed}
                     onChange={() => completeTodo(todo.id)}
+                />
+            </label>
+            <label>
+                Initiation
+                <input 
+                    type="checkbox"
+                    checked={todo.initiation}
+                    onChange={() => initiationTodo(todo.id)}
                 />
             </label>
                 {/* DELETE BUTTON  */}

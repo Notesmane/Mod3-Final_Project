@@ -2,7 +2,7 @@ import Todo from './Todo';
 import '../App.css';
 
 function TodoList(props) {
-    const { todos, addTodo, completeTodo, editTodoText, deleteTodo } = props;  // object structuring
+    const { todos, addTodo, completeTodo, initiationTodo, editTodoText, deleteTodo } = props;  // object structuring
 
     console.log("FROM TODOLIST", todos);
 
@@ -28,6 +28,7 @@ function TodoList(props) {
                                 key={item.id}
                                 todo={item} 
                                 completeTodo={completeTodo} // renders a new instance of the todo function
+                                initiationTodo={initiationTodo}
                                 editTodoText={editTodoText} 
                                 deleteTodo={deleteTodo}
                                 />
@@ -44,6 +45,7 @@ function TodoList(props) {
                                 key={item.id}
                                 todo={item} 
                                 completeTodo={completeTodo}
+                                initiationTodo={initiationTodo}
                                 editTodoText={editTodoText}
                                 deleteTodo={deleteTodo}
                                 /> // passes the function
