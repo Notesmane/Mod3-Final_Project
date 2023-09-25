@@ -6,9 +6,30 @@ import { getToken } from "./users-service";
 
 const BASE_URL = '/api/tasks';
 
-export function createTask(taskData) {
-    return sendRequest(BASE_URL, 'POST', taskData);
+export async function createTask(taskData) {
+    return await sendRequest(BASE_URL, 'POST', taskData);
 }
+
+export async function getTask(page) {
+    return await sendRequest(`${BASE_URL}/${page}`);
+}
+
+
+export async function deleteTask(id) {
+  console.log("From task api", id)
+    return await sendRequest(`${BASE_URL}/${id}`, 'DELETE');
+}
+
+export async function getTaskById(id) {
+  console.log("From task api", id)
+  return await sendRequest(`${BASE_URL}/task/${id}`);
+}
+
+// export async function editTask(id) {
+//   console.log("From task api", id)
+//     return await sendRequest(`${BASE_URL}/${id}`, 'UPDATE');
+// }
+
 
 
 /*--- Helper Functions ---*/

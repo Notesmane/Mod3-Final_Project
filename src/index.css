@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 /* CSS Custom Properties */
 :root {
   /* --white: #FFFFFF;
@@ -13,7 +18,7 @@
   --tan-1: #FCFCFC;
   --tan-2: #C6E6FB;
   --tan-3: #C6E6FB;
-  --tan-4: #5D737E;
+  --tan-4: rgb(192 38 211);
   --blue: #0A365C;
   --text-light: #000000;
   --text-dark: #020F19;
@@ -30,7 +35,7 @@ body {
   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--tan-4);
+  background: linear-gradient(to right, indigo, purple);
   padding: 2vmin;
   height: 100vh;
 }
@@ -87,12 +92,13 @@ code {
   font-size: 2vmin;
 }
 
-.form-container {
+/* .form-container {
   padding: 3vmin;
   background-color: var(--tan-1);
+  background-color: green;
   border: .1vmin solid var(--tan-3);
   border-radius: 1vmin;
-}
+} */
 
 p.error-message {
   color: var(--blue);
@@ -103,7 +109,7 @@ form {
   display: grid;
   grid-template-columns: 1fr 3fr;
   gap: 1.25vmin;
-  color: var(--text-light);
+  /* color: var(--text-light); */
 }
 
 label {
@@ -113,12 +119,14 @@ label {
 }
 
 input {
-  padding: 1vmin;
+  padding: .5vmin;
+  padding-left: 1.25vmin;
   font-size: 2vmin;
   border: .1vmin solid var(--tan-3);
   border-radius: .5vmin;
   color: var(--text-dark);
   background-image: none !important; /* prevent lastpass */
+  background-color: rgb(245 208 254);
   outline: none;
 }
 
@@ -130,7 +138,8 @@ button, a.button {
   margin: 1vmin;
   padding: 1vmin;
   color: var(--white);
-  background-color: var(--blue);
+  /* background-color: var(--blue); */
+  /* background-color: #0E21A0; */
   font-size: 2vmin;
   font-weight: bold;
   text-decoration: none;
@@ -154,6 +163,7 @@ button.btn-xs {
 button:disabled, form:invalid button[type="submit"] {
   cursor: not-allowed;
   background-color: var(--tan-4);
+  color: rgb(112 26 117);
 }
 
 button[type="submit"] {

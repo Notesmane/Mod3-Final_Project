@@ -10,7 +10,7 @@ const Schema = mongoose.Schema;
 const taskSchema = new Schema(
     {
         text: {type: String, required: true},
-        stage: {type: String, enum:['initiaion', 'planning', 'execution', 'closing'], required: true}
+        stage: {type: String, enum:['initiation', 'planning', 'execution', 'closing'], required: true}
     }
 )
 

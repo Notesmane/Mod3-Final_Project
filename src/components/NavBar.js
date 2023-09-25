@@ -8,10 +8,14 @@ function NavBar({user, setUser}) {
   }
 
   return (
-    <nav>
+    <nav className='bg-purple-400'>
       <h3>Welcome, {user.name}</h3>
-      <Link to="/orders">Order History</Link>&nbsp; | &nbsp;
-      <Link to="/orders/new">New Order</Link>&nbsp; | &nbsp;
+      {/* <Link to="/orders">New Task</Link>&nbsp; | &nbsp; */}
+      <Link to="/orders/new">New Task</Link>&nbsp; | &nbsp;
+      <Link to="/orders/initiation">Initiation</Link>&nbsp; | &nbsp;
+      <Link to="/orders/planning">Planning</Link>&nbsp; | &nbsp;
+      <Link to="/orders/execution">Execution</Link>&nbsp; | &nbsp;
+      <Link to="/orders/closing">Closing</Link>&nbsp; | &nbsp;
       <Link to="" onClick={handleLogout}>Log Out</Link>
     </nav>
   );

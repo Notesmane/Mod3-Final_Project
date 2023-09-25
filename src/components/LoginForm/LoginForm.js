@@ -31,12 +31,12 @@ async function handleSubmit(evt) {
 
 return (
   <div>
-    <div className="form-container" onSubmit={handleSubmit}>
-    <h4>Please enter your information and then press 'Log In'.</h4>
+    <div className="p-5 ring-2 ring-fuchsia-600 rounded-3xl" onSubmit={handleSubmit}>
+    <h4 className='p-0 mb-7 border-solid'>Please enter your information and then press 'Log In'.</h4>
       <form autoComplete="off" >
-        <label>Email</label>
+        <label>Email:</label>
         <input type="text" name="email" value={credentials.email} onChange={handleChange} required />
-        <label>Password</label>
+        <label>Password:</label>
         <input type="password" name="password" value={credentials.password} onChange={handleChange} required />
         <button type="submit">LOG IN</button>
       </form>

@@ -2,6 +2,7 @@
   text-align: center;
   /* display: flex;
   justify-content: space-around; */
+  color: white;
 }
 
 .allContainers {
@@ -17,7 +18,7 @@
 
 .messageContainer {
   height: 700px;
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   display: flex;
   justify-content: flex-end;
 }

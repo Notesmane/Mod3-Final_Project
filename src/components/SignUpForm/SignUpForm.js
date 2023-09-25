@@ -1,7 +1,6 @@
 import { useState } from "react";
 import {signUp} from '../../utilities/users-service';
 
-
 // SignUpForm.jsx <-> users-service.js <-> users-api.js <-> routes/users.js <--> controller/users.js
 
 function SignUpForm({setUser}) {
@@ -50,23 +49,24 @@ function SignUpForm({setUser}) {
   };
 
   return (
-    <div>
-      <div className="form-container">
-        <h4>Please enter your information and then press 'Sign Up'.</h4>
+    <div className=" border-solid ">
+      {/* <div className="form-container"> */}
+      <div className="p-5 ring-2 ring-fuchsia-600 rounded-3xl">
+        <h4 className='p-0 mb-7 border-solid'>Please enter your information and then press 'Sign Up'.</h4>
         <form autoComplete="off" onSubmit={handleSubmit}>
-          <label>Name</label>
+          <label className="decoration-fuchsia-600">Name:</label>
           <input type="text" name="name" value={formData.name} onChange={handleChange} required/>
 
-          <label>Email</label>
+          <label>Email:</label>
           <input type="email" name="email" value={formData.email} onChange={handleChange} required />
 
-          <label>Password</label>
+          <label>Password:</label>
           <input type="password" name="password" value={formData.password} onChange={handleChange} required />
 
-          <label>Confirm Password</label>
+          <label>Confirm Password:</label>
           <input type="password" name="confirm" value={formData.confirm} onChange={handleChange} required />
 
-          <button type="submit" disabled={disable}>Sign Up</button>
+          <button type="submit" disabled={disable}>Sign Up:</button>
         </form>
       </div>
       <p className="error-message">{formData.error}</p>

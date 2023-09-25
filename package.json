@@ -10,6 +10,7 @@
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.2",
+    "jsx-view-engine": "^1.0.0",
     "mongoose": "^7.5.1",
     "morgan": "^1.10.0",
     "react": "^18.2.0",
@@ -43,5 +44,8 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:3001"
+  "proxy": "http://localhost:3001",
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  }
 }

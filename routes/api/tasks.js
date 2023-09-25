@@ -6,4 +6,18 @@ const router = express.Router();
 // POST 
 router.post('/', ensureLoggedIn, tasksCtrl.create);
 
+// GET
+router.get('/:page', tasksCtrl.getTask);
+
+// DELETE
+router.delete('/:id', tasksCtrl.deleteTask);
+
+// GET
+router.get('/task/:id', tasksCtrl.getTaskById);
+
+// Edit
+// router.edit('/:id', tasksCtrl.editTask);
+
+
+
 module.exports = router;
