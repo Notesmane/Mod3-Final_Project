@@ -76,6 +76,7 @@ Below are the technologies that I've used to create this application.
 - there will be a Project Resource list, with all necessary data. Contacts, Venue info, important dates, etc.
 - there will be Admin users and Team Member users. Admins will be able to delete any user, or any users task. Team Member users will only be able to delete their own account and edit or delete their own tasks.
 - add in my linkedin, git hub and email links at the bottom where the copyrights footer is
+- user should be able to add media files
 - The final addition I would like to add is a functional chat feature where all users can communicate, leaving messages that pertain to the project and its tasks. 
 
 

@@ -18,7 +18,7 @@ import "./App.css";
 function App() {
   const [user, setUser] = useState(getUser());
   console.log(user);
-const formattedName = user.name.charAt(0).toUpperCase() + user.name.slice(1);
+// const formattedName = user.name.charAt(0).toUpperCase() + user.name.slice(1);
 
 const handleLogout = () => {
   usersService.logOut();
@@ -36,7 +36,7 @@ return (
       </p> */}
     <main className="App">
       <div className="flex justify-between">
-        <h3 className="mx-2 flex justify-start text-2xl ">Welcome, {formattedName}</h3>
+        {/* <h3 className="mx-2 flex justify-start text-2xl ">Welcome, {formattedName}</h3> */}
         <img className="bg-contain" src={logo} title="JotLogo" alt=''/>
         <Link to="" className="m-2 text-indigo-950 font-bold flex justify-end text-lg w-1/6 hover:text-fuchsia-200" onClick={handleLogout}>Log Out</Link>
       </div>

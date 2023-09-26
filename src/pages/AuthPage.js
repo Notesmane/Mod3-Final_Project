@@ -9,9 +9,9 @@ function AuthPage({setUser}) {
 
     <div>
 
-      <h1 className="text-2xl text-violet-200 mb-8">Project Management Dashboard</h1>
+      <h1 className="text-2xl text-violet-200 mb-8">Welcome to Jot!</h1>
       <div className="mb-8">
-        <span>Welcome to WhiteBoard, your comprehensive all-in-one resource for your Project's organization. Here you can store and track all data necessary for the completion of your project. </span>
+        <span>The comprehensive, all-in-one dashboard for your Project's organization. Here you can store and track all data necessary for the completion of your project. </span>
       <div>
 
       </div>

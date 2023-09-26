@@ -40,22 +40,25 @@ function EditTask() {
     }
 
     return (
-      <div className="flex justify-center p-4 bg-blue-600">
+      <div className="flex justify-center p-4 mx-4 mb-4 bg-slate-950 rounded-lg">
         <div>
-          <h1>Edit Task</h1> 
+          <h1 className="text-fuchsia-300 text-xl pb-10">Edit Task</h1> 
               {/* action points to where the POST data will be sent */}
           {task && <form className="formContainer" onSubmit={handleSubmit}> 
             
-            <div className="newTaskFormContainer">
+            <div className="flex justify-around w-800">
               Task: <input type="text" name="text" defaultValue={task?.text} onChange={handleChange}/>
             </div>
 
+            <div>
             <select name="stage" defaultValue={task?.stage} onChange={handleChange} style={{color:'black'}}>
               <option value="initiation">Initiation</option>
               <option value="planning">Planning</option>
               <option value="execution">Execution</option>
               <option value="closing">Closing</option>
             </select>
+
+            </div>
 
             <div>
               <input type="submit" value="Submit"/>
