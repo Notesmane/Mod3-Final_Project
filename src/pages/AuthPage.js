@@ -11,10 +11,17 @@ function AuthPage({setUser}) {
 
       <h1 className="text-2xl text-violet-200 mb-8">Project Management Dashboard</h1>
       <div className="mb-8">
-        <span>Welcome to WhiteBoard, your comprehensive Project Manangement Dashboard. Here you can create your task lists for all parts of the Project Life Cylce, coordinate and communicate with your team members and add vital information which will be easily accessible for all team members.</span>
+        <span>Welcome to WhiteBoard, your comprehensive all-in-one resource for your Project's organization. Here you can store and track all data necessary for the completion of your project. </span>
+      <div>
+
+      </div>
+        <br />
+        <span> - Create task lists - Coordinate and communicate with your team members - Store vital information - Keep it all safe so only team members have access to it. </span>
+        <br />
+        <span>Sign Up or Log In below to get started.</span>
       </div>
 
-      <button class="rounded-full px-5 py-1 pb-1.5 mb-8 bg-fuchsia-900 hover:bg-fuchsia-300 hover:text-fuchsia-900" onClick={() => setShowLogin(!showLogin)}>{showLogin ? "Sign up" : "Log in"}</button>
+      <button class="rounded-full px-10 py-1 pb-1.5 mb-8 bg-fuchsia-900 hover:bg-fuchsia-300 hover:text-fuchsia-900 drop-shadow-md" onClick={() => setShowLogin(!showLogin)}>{showLogin ? "Sign Up" : "Log In"}</button>
 
       {
         showLogin ? (

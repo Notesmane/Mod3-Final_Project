@@ -37,13 +37,17 @@ REFER TO: SEI-Cafe & MERN-Infrastructure
 ## Introduction
 For my final project I've decided to build a Project Management Dashboard. This will serve a double purpose as it will also be the first iteration of my own personal PM Dashboard that I hope to use for future projects. The Project Life Cycle is composed of 4 main stages; Initiation, Planning, Execution and Closing. Along with the tasks neccessary to complete a given project there are also random tasks that fall into grey areas or are short term tasks that dont need to fall into any of the stages. This app will help to keep all tasks and info organized. 
 
-To do this, I will be using the MERN-Infrastructure App to clone my project from. Then I will be referring to the Todo App from Mod2 to get the basic functionality of the CRUD operations to implement on my tasks.
+To do this, I will be using the MERN-Infrastructure App to clone my project from. Then I will be referring to the Todo App from Mod2 to get the basic functionality of the CRUD operations to implement on my tasks. 
 
 
 ## User Stories
 - As a registered user, I want to create new tasks so that I can organize to-do's
 - As a registered user, I want to be able to edit a task
-- As a registered user, I want to be able to delete a task
+- As a registered user, I want to be able to delete my own tasks
+- As a registered user, I will have exclusive access to the app 
+- As a registered user, I will be able to create, edit and delete new lists
+- As an Admin user, I will be able to edit or delete any user
+- As an Admin user, I will be able to edit or delete any task
 
 
 ## Technologies Used

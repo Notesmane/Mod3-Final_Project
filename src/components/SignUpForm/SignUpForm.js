@@ -51,8 +51,8 @@ function SignUpForm({setUser}) {
   return (
     <div className=" border-solid ">
       {/* <div className="form-container"> */}
-      <div className="p-5 ring-2 ring-fuchsia-600 rounded-3xl">
-        <h4 className='p-0 mb-7 border-solid'>Please enter your information and then press 'Sign Up'.</h4>
+      <div className="p-5 ring-2 ring-slate-600 rounded-3xl bg-slate-950">
+        <h4 className='p-0 mb-7 border-solid'>Please enter your information, then press 'Sign Up'.</h4>
         <form autoComplete="off" onSubmit={handleSubmit}>
           <label className="decoration-fuchsia-600">Name:</label>
           <input type="text" name="name" value={formData.name} onChange={handleChange} required/>
@@ -66,7 +66,7 @@ function SignUpForm({setUser}) {
           <label>Confirm Password:</label>
           <input type="password" name="confirm" value={formData.confirm} onChange={handleChange} required />
 
-          <button type="submit" disabled={disable}>Sign Up:</button>
+          <button type="submit" disabled={disable}>Sign Up</button>
         </form>
       </div>
       <p className="error-message">{formData.error}</p>

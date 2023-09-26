@@ -17,7 +17,7 @@ function App() {
   console.log(user);
 
   return (
-    <div className="container mx-auto bg-gray-200 rounded-xl shadow p-8 m-10 bg-slate-900">
+    <div className="container mx-auto rounded-xl shadow p-8 m-10 bg-slate-900 max-w-2xl min-w-min drop-shadow-md">
       {/* <p className="text-3xl text-gray-700 font-bold mb-5">
         Welcome!
       </p>

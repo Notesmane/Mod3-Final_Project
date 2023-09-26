@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap');
 
 /* CSS Custom Properties */
 :root {
@@ -26,11 +27,12 @@
 
 *, *:before, *:after {
   box-sizing: border-box;
+  font-family: "Outfit";
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: outfit, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
   sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -122,11 +124,11 @@ input {
   padding: .5vmin;
   padding-left: 1.25vmin;
   font-size: 2vmin;
-  border: .1vmin solid var(--tan-3);
+  border: .1vmin solid  rgb(71 85 105);;
   border-radius: .5vmin;
-  color: var(--text-dark);
+  /* color: var(--text-dark); */
   background-image: none !important; /* prevent lastpass */
-  background-color: rgb(245 208 254);
+  background-color: rgb(71 85 105);
   outline: none;
 }
 
@@ -144,7 +146,7 @@ button, a.button {
   font-weight: bold;
   text-decoration: none;
   text-align: center;
-  border: .1vmin solid var(--tan-2);
+  border: .1vmin solid rgb(71 85 105);
   border-radius: .5vmin;
   outline: none;
   cursor: pointer;
@@ -162,7 +164,7 @@ button.btn-xs {
 
 button:disabled, form:invalid button[type="submit"] {
   cursor: not-allowed;
-  background-color: var(--tan-4);
+  /* background-color: var(--tan-4); */
   color: rgb(112 26 117);
 }
 
