@@ -12,6 +12,7 @@ import NavBar from "./components/NavBar";
 import { getUser } from "./utilities/users-service";
 import { Link } from "react-router-dom";
 import * as usersService from './utilities/users-service';
+import logo from '../src/Jotlogo.png';
 import "./App.css";
 
 function App() {
@@ -24,6 +25,7 @@ const handleLogout = () => {
   setUser(null);
 }
 
+
 return (
     <div>
       {/* <p className="text-3xl text-gray-700 font-bold mb-5">
@@ -33,12 +35,13 @@ return (
         React and Tailwind CSS in action
       </p> */}
     <main className="App">
-      <div className="flex">
-        <h3 className="mx-2 flex justify-start text-2xl w-1/2">Welcome, {formattedName}</h3>
-        <Link to="" className="mx-2 text-indigo-950 font-bold flex justify-end text-lg w-1/2 hover:text-fuchsia-200" onClick={handleLogout}>Log Out</Link>
+      <div className="flex justify-between">
+        <h3 className="mx-2 flex justify-start text-2xl ">Welcome, {formattedName}</h3>
+        <img className="bg-contain" src={logo} title="JotLogo" alt=''/>
+        <Link to="" className="m-2 text-indigo-950 font-bold flex justify-end text-lg w-1/6 hover:text-fuchsia-200" onClick={handleLogout}>Log Out</Link>
       </div>
       {user ? (
-        <div className="container mx-auto rounded-xl shadow p-8 m-10 bg-slate-900 max-w-none min-w-min drop-shadow-md">
+        <div className="mx-auto rounded-xl shadow p-4 m-10 bg-slate-900 max-w-none min-w-min drop-shadow-md">
           <NavBar user={user}/>
           <Routes>
             <Route path="/orders/new" element={<NewTask />} />
@@ -57,8 +60,43 @@ return (
         </div>
       )}
     </main>
+    
+    <div className='flex justify-center pt-10 text-center text-xs'>
+            <p>Website powered by: NotesMane of Noteworthy Productions   |   All Rights Reserved. Copyright, NYC - 2023</p>
+        </div>
     </div>
   );
 }
 
 export default App;
+
+
+// {/* <div className="footer">
+//           <br></br>
+//           {/* <button>Email</button> */}
+//           <a
+//             href="https://www.linkedin.com/in/ron-powell-nyc212/"
+//             target="_blank"
+//             rel="noreferrer"
+
+//           >
+//             <img className="linkedin" src={linkedin} title="LinkedIn" alt=''/>
+//           </a>
+//           <a
+//             href="https://github.com/Notesmane"
+//             target="_blank"
+//             rel="noreferrer"
+//           >
+//             <img className="github" src={github} title="Github" alt=''/>
+//           </a>
+//           <a
+//             href="mailto:ronpowell156@gmail.com"
+//             target="_blank"
+//             rel="noreferrer"
+//           >
+//             <img className="email" src={email} title="Contact" alt=''/>
+//           </a>
+//           {/* <button>Contact</button> */}
+//           {/* <button href="https://github.com/Notesmane">Github</button> */}
+//           <br></br>
+//         </div> */}

@@ -75,6 +75,7 @@ Below are the technologies that I've used to create this application.
 - When a new task is created, the user must also pick the stage that the task should go into. Once created, the task will then populate on the chosen Stage list as well as on its current list.
 - there will be a Project Resource list, with all necessary data. Contacts, Venue info, important dates, etc.
 - there will be Admin users and Team Member users. Admins will be able to delete any user, or any users task. Team Member users will only be able to delete their own account and edit or delete their own tasks.
+- add in my linkedin, git hub and email links at the bottom where the copyrights footer is
 - The final addition I would like to add is a functional chat feature where all users can communicate, leaving messages that pertain to the project and its tasks. 
 
 
