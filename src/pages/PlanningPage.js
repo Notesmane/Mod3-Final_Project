@@ -23,7 +23,7 @@ function PlanningPage() {
     }
 
     return(
-        <div>
+        <div className="bg-fuchsia-600">
             <h2>Planning Page</h2>
             {tasks && tasks.map((task) => {
                 return (
@@ -31,10 +31,6 @@ function PlanningPage() {
                         <h2>{task.text}</h2>
 
                         <Link to={`/orders/edit/${task._id}`}>Edit Task</Link>
-                        {/* <a href={`/orders/${task._id}/edit`}>Edit Task</a>
-                        <Link>
-                            Edit
-                        </Link> */}
                         <Link to="" onClick={() => deleteTask(task._id)}>
                             Delete
                         </Link>

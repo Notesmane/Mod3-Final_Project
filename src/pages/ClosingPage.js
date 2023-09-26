@@ -17,6 +17,11 @@ function ClosingPage() {
     
     console.log(tasks)
 
+    async function deleteTask(id) {
+        window.location.reload(true)
+        await taskService.deleteTask(id)
+    }
+    
     return(
         <div>
             <h2>Closing Page</h2>
@@ -24,13 +29,8 @@ function ClosingPage() {
                 return (
                     <div key={task._id}>
                         <h2>{task.text}</h2>
-                        <select name="stage" value={task.stage} title='Edit Stage'>
-                            <option value="initiation">Initiation</option>
-                            <option value="planning">Planning</option>
-                            <option value="execution">Execution</option>
-                            <option value="closing">Closing</option>
-                        </select>
-                        <Link>
+                        <Link to={`/orders/edit/${task._id}`}>Edit Task</Link>
+                        <Link to="" onClick={() => deleteTask(task._id)}>
                             Delete
                         </Link>
                     </div>

@@ -17,7 +17,6 @@ function InitiationPage() {
     
     console.log(tasks)
 
-
     async function deleteTask(id) {
         window.location.reload(true)
         await taskService.deleteTask(id)
