@@ -34,7 +34,7 @@ function NewTask() {
               Task: <input type="text" name="text" value={newTask.text} onChange={handleChange} />
             </div>
 
-            <select name="stage" value={newTask.stage} onChange={handleChange}>
+            <select name="stage" value={newTask.stage} onChange={handleChange} style={{color:'black'}}>
               <option value="initiation">Initiation</option>
               <option value="planning">Planning</option>
               <option value="execution">Execution</option>

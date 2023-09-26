@@ -14,7 +14,6 @@ export async function getTask(page) {
     return await sendRequest(`${BASE_URL}/${page}`);
 }
 
-
 export async function deleteTask(id) {
   console.log("From task api", id)
     return await sendRequest(`${BASE_URL}/${id}`, 'DELETE');
@@ -25,10 +24,10 @@ export async function getTaskById(id) {
   return await sendRequest(`${BASE_URL}/task/${id}`);
 }
 
-// export async function editTask(id) {
-//   console.log("From task api", id)
-//     return await sendRequest(`${BASE_URL}/${id}`, 'UPDATE');
-// }
+export async function editTask(id, task) {
+  console.log("From task api", id, task)
+    return await sendRequest(`${BASE_URL}/${id}`, 'PUT', task);
+}
 
 
 

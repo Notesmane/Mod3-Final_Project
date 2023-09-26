@@ -1,7 +1,8 @@
 import {useState, useEffect } from 'react';
-import {createTask} from '../utilities/tasks-service';
+import {editTask} from '../utilities/tasks-service';
 import * as taskService from '../utilities/tasks-service';
-import {useParams} from 'react-router-dom';
+import {useParams, useNavigate} from 'react-router-dom';
+
 
 // import * as usersService from '../utilities/users-service';
 
@@ -9,50 +10,47 @@ import {useParams} from 'react-router-dom';
 
 function EditTask() {
   const {id} = useParams() 
+  const navigate = useNavigate()
   console.log(id)
-    const [editTask, setEditTask] = useState({
-      text:"",
-      stage:"initiation"
-    
-    })
-
+   
     const [task, setTask] = useState(null)
 
-    // const handleChange = (e) => {
-    //   setEditTask({
-    //       ...editTask,
-    //       [e.target.name]: e.target.value,
-    //   });
-    // };
+    const handleChange = (e) => {
+      setTask({
+          ...task,
+          [e.target.name]: e.target.value,
+      });
+    };
 
     useEffect(() => {
       const getTaskById= async () => {
           const task = await taskService.getTaskById(id)
           setTask(task)
-
+        console.log(task)
       };
       getTaskById()
     }, [])
     console.log(task)
 
-    // const handleSubmit = async (e) => {
-    //   e.preventDefault()
-    //   const task = await createEditTask(editTask);
-    //   console.log(task)
-    // }
+    const handleSubmit = async (e) => {
+      e.preventDefault()
+      const updatedTask = await editTask(id, task);
+      console.log(updatedTask)
+      navigate(`/orders/${task.stage}`)
+    }
 
     return (
-      <div className="taskContainer">
+      <div className="flex justify-center p-4 bg-blue-600">
         <div>
           <h1>Edit Task</h1> 
               {/* action points to where the POST data will be sent */}
-          <form className="formContainer"> 
+          {task && <form className="formContainer" onSubmit={handleSubmit}> 
             
             <div className="newTaskFormContainer">
-              Task: <input type="text" name="text"/>
+              Task: <input type="text" name="text" defaultValue={task?.text} onChange={handleChange}/>
             </div>
 
-            <select name="stage" >
+            <select name="stage" defaultValue={task?.stage} onChange={handleChange} style={{color:'black'}}>
               <option value="initiation">Initiation</option>
               <option value="planning">Planning</option>
               <option value="execution">Execution</option>
@@ -63,7 +61,7 @@ function EditTask() {
               <input type="submit" value="Submit"/>
             </div>
 
-          </form>
+          </form>}
         </div>
       </div>
     );

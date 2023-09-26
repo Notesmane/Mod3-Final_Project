@@ -11,7 +11,7 @@ function NavBar({user, setUser}) {
     <nav className='bg-purple-400'>
       <h3>Welcome, {user.name}</h3>
       {/* <Link to="/orders">New Task</Link>&nbsp; | &nbsp; */}
-      <Link to="/orders/new">New Task</Link>&nbsp; | &nbsp;
+      <Link className='hover:bg-sky-700' to="/orders/new">New Task</Link>&nbsp; | &nbsp;
       <Link to="/orders/initiation">Initiation</Link>&nbsp; | &nbsp;
       <Link to="/orders/planning">Planning</Link>&nbsp; | &nbsp;
       <Link to="/orders/execution">Execution</Link>&nbsp; | &nbsp;

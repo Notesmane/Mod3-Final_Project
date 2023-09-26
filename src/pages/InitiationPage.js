@@ -25,19 +25,23 @@ function InitiationPage() {
 
     return(
         <div>
-            <h2>Initiation Page</h2>
+            <span>Initiation Page</span>
             {tasks && tasks.map((task) => {
                 return (
-                    <div key={task._id}>
-                        <h2>{task.text}</h2>
-                        <Link>
-                            Edit
-                        </Link>
-                        <Link to="" onClick={() => deleteTask(task._id)}>
-                            Delete
-                        </Link>
+                    <div>
+                        <div key={task._id}>
+                            <h2 className="rounded-md bg-slate-800 flex-1 justify-start">{task.text}</h2>
+                        </div>
+                        <div>
+                            <Link>
+                                Edit
+                            </Link>
+                            <Link to="" onClick={() => deleteTask(task._id)}>
+                                Delete
+                            </Link>
+                        </div>
                     </div>
-                )
+                    )
             })}
         </div>
     )

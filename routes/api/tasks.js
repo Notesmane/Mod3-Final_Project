@@ -7,16 +7,16 @@ const router = express.Router();
 router.post('/', ensureLoggedIn, tasksCtrl.create);
 
 // GET
+router.get('/task/:id', tasksCtrl.getTaskById);
+
+// GET
 router.get('/:page', tasksCtrl.getTask);
 
 // DELETE
 router.delete('/:id', tasksCtrl.deleteTask);
 
-// GET
-router.get('/task/:id', tasksCtrl.getTaskById);
-
-// Edit
-// router.edit('/:id', tasksCtrl.editTask);
+// PUT
+router.put('/:id', tasksCtrl.editTask);
 
 
 

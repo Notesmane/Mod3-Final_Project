@@ -44,13 +44,26 @@ async function getTaskById(req, res) {
   const {id} = req.params;
   console.log('hello')
   console.log(id)
-  // try {
-  //   const task = Task.findById(id)
-  //   // res.json(task)
-  //   console.log(task)
-  // } catch (error) {
-  //   console.log(error)
-  // }
+  try {
+    const task = await Task.findById(id)
+    console.log(task) 
+    res.json(task)
+  } catch (error) {
+    console.log(error)
+  }
 }
 
-module.exports = { create, getTask, deleteTask, getTaskById };
+async function editTask(req, res) {
+  const {id} = req.params;
+  console.dir(req.params)
+  try {
+    const updatedTask = await Task.findByIdAndUpdate(id, req.body, {new:true})
+    res.json(updatedTask)
+  } catch (error) {
+    console.log(error)
+    res.status(400).json(error);
+  }
+}
+
+
+module.exports = { create, getTask, deleteTask, getTaskById, editTask };

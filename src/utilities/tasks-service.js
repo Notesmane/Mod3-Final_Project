@@ -21,6 +21,6 @@ export async function getTaskById(id) {
     return task
 }
 
-// export async function editTask(id) {
-//     await tasksApi.editTask(id)
-// }
+export async function editTask(id, task) {
+    await tasksApi.editTask(id, task)
+}
